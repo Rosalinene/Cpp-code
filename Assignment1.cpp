@@ -20,24 +20,44 @@ Functions:
     */
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdlib.h>
+#include <stdbool.h>
 
 int main()
 {
     char ch;
     double a;
     double b;
+    int num_valid_operators = 4;
+    char valid_operators[num_valid_operators] = "+-*/";
 
-    while (1) 
+     while (1) 
     {
+
         //Prompt user for operator
-        printf("Enter an operator (+, -, *, /), ");
+        printf("Enter an operator (%s), ", valid_operators);
         printf("If you want to exit, please press x: ");       
         scanf(" %c", &ch);
 
         //Exit setting
         if (ch == 'x')
-            exit(0);
-        
+             return 0;
+        else
+        {
+            bool valid = false;
+            for (int i = 0; i < num_valid_operators; i++) 
+            {
+                if (ch == valid_operators[i]) {
+                    valid = true;
+                    break;
+                }//End if
+            }//End for
+             if (!valid) 
+            {
+                printf("Error! Please write a valid operator\n");
+                continue;
+            }//End if
+        }//End else
         //Prompt user for two operands
         printf("Enter the first operand: ");
         scanf("%lf", &a);
