@@ -33,7 +33,6 @@ int main()
 
      while (1) 
     {
-
         //Prompt user for operator
         printf("Enter an operator (%s), ", valid_operators);
         printf("If you want to exit, please press x: ");       
@@ -41,13 +40,17 @@ int main()
 
         //Exit setting
         if (ch == 'x')
+        {
+        printf("Calculator ended!");
              return 0;
+        }//End Calculator ended
         else
         {
             bool valid = false;
             for (int i = 0; i < num_valid_operators; i++) 
             {
-                if (ch == valid_operators[i]) {
+                if (ch == valid_operators[i]) 
+                {
                     valid = true;
                     break;
                 }//End if
@@ -56,14 +59,15 @@ int main()
             {
                 printf("Error! Please write a valid operator\n");
                 continue;
-            }//End if
+            }//End if(!valid)
         }//End else
+
         //Prompt user for two operands
         printf("Enter the first operand: ");
         scanf("%lf", &a);
         printf("Enter the second operand: ");
         scanf("%lf", &b);
- 
+
         switch (ch) 
         {
         case '+':
