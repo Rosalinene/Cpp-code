@@ -63,30 +63,28 @@ int main()
         }//End else
 
         //Prompt user for two operands
-        printf("Enter the first operand: ");
-        scanf("%lf", &a);
-        printf("Enter the second operand: ");
-        scanf("%lf", &b);
+        printf("Enter the two operands: ");
+        scanf("%lf %lf", &a, &b);
 
         switch (ch) 
         {
         case '+':
-            printf("%.1lf + %.1lf = %.1lf\n", a, b, a + b);
+            printf("%.2lf + %.2lf = %.2lf\n", a, b, a + b);
             break;
         //End case '+'
         
         case '-':
-            printf("%.1lf - %.1lf = %.1lf\n", a, b, a - b);
+            printf("%.2lf - %.2lf = %.2lf\n", a, b, a - b);
             break;
         //End case '-'
         
         case '*':
-            printf("%.1lf * %.1lf = %.1lf\n", a, b, a * b);
+            printf("%.2lf * %.2lf = %.2lf\n", a, b, a * b);
             break;
         //End case '*'
         
         case '/':
-            printf("%.1lf / %.1lf = %.1lf\n", a, b, a / b);
+            printf("%.2lf / %.2lf = %.2lf\n", a, b, a / b);
             break;
         //End case '/'
         
